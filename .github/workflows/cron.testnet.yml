@@ -15,7 +15,7 @@ env:
 permissions: write-all
 jobs:
   runCLI:
-    name: Winners Compute
+    name: Draw Auction Bot
     runs-on: ${{ matrix.os }}
     strategy:
       max-parallel: 1
