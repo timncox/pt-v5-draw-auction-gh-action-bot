@@ -1,6 +1,9 @@
-import nodeFetch from 'node-fetch';
-import { BaseProvider } from '@ethersproject/providers';
-import { downloadContractsBlob, ContractsBlob } from '@generationsoftware/pt-v5-utils-js';
+import nodeFetch from "node-fetch";
+import { BaseProvider } from "@ethersproject/providers";
+import {
+  downloadContractsBlob,
+  ContractsBlob,
+} from "@generationsoftware/pt-v5-utils-js";
 import {
   getProvider,
   instantiateRelayerAccount,
@@ -9,18 +12,21 @@ import {
   DrawAuctionEnvVars,
   DrawAuctionConfig,
   RelayerAccount,
-} from '@generationsoftware/pt-v5-autotasks-library';
+} from "@generationsoftware/pt-v5-autotasks-library";
 
-
-const main = async () =>{
+const main = async () => {
   const envVars: DrawAuctionEnvVars = loadDrawAuctionEnvVars();
 
   const provider: BaseProvider = getProvider(envVars);
+  console.log("provider");
+  console.log(provider);
 
   const relayerAccount: RelayerAccount = await instantiateRelayerAccount(
     provider,
-    envVars.CUSTOM_RELAYER_PRIVATE_KEY,
+    envVars.CUSTOM_RELAYER_PRIVATE_KEY
   );
+  console.log("relayerAccount");
+  console.log(relayerAccount);
 
   const drawAuctionConfig: DrawAuctionConfig = {
     chainId: Number(envVars.CHAIN_ID),
@@ -28,20 +34,21 @@ const main = async () =>{
     covalentApiKey: envVars.COVALENT_API_KEY,
     rewardRecipient: envVars.REWARD_RECIPIENT,
     minProfitThresholdUsd: Number(envVars.MIN_PROFIT_THRESHOLD_USD),
-    customRelayerPrivateKey: process.env.CUSTOM_RELAYER_PRIVATE_KEY,
-
     signer: relayerAccount.signer,
     wallet: relayerAccount.wallet,
     relayerAddress: relayerAccount.relayerAddress,
   };
 
   try {
-    const rngContracts: ContractsBlob = await downloadContractsBlob(drawAuctionConfig.chainId, nodeFetch);
+    const rngContracts: ContractsBlob = await downloadContractsBlob(
+      drawAuctionConfig.chainId,
+      nodeFetch
+    );
 
     await runDrawAuction(rngContracts, drawAuctionConfig);
   } catch (e) {
     console.error(e);
   }
-}
+};
 
-main() 
+main();
