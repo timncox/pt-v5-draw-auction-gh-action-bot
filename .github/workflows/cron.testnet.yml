@@ -41,7 +41,7 @@ jobs:
         run: |
           npm install
           printf '%s\n' "$date"
-          mkdir -p logs && FORCE_COLOR=1 npx tsx index.ts | tee logs/"$date".log
+          mkdir -p logs && npx tsx index.ts | tee logs/"$date".log
 
       - name: Commit Logs
         continue-on-error: true
