@@ -1,0 +1,84 @@
+Operating on: 11155420 - Optimism Sepolia
+
+
+Instantiating RNG contracts ...
+┌──────────────────────┬──────────────────────────────────────────────┐
+│ (index)              │ Values                                       │
+├──────────────────────┼──────────────────────────────────────────────┤
+│ prizePoolContract    │ '0x23Fc16532B025d2EBF73614b730793715aF56ec7' │
+│ drawManagerContract  │ '0xAc2079496445bcdE8C5bfD33021715aa37CC9A99' │
+│ rngWitnetContract    │ '0x3f592F85D4C7779814D43EB01f47375bDfe1a8B3' │
+│ rngBlockhashContract │ undefined                                    │
+└──────────────────────┴──────────────────────────────────────────────┘
+
+Gathering info on state of auctions ...
+Getting RNG token and native (gas) token market rates ...
+
+Running draw auction state context multicalls ...
+
+******************
+
+Tokens:
+
+1a. Chain Native/Gas Token ETH Market Rate (USD): $3522.5295
+1b. Reward Token 'WETH' Market Rate (USD): $3522.5295
+
+
+Rng Auction State:
+
+2a. Can Start Draw?  ✔
+2b. Start Draw Expected Reward: 0.00053446433570015 WETH
+2c. Start Draw Expected Reward (USD): $1.88 $1.8826663892016815
+2d. PrizePool (11155420 - Optimism Sepolia) can start draw in: 113.66666666666667 minutes
+
+
+Finish Draw Auction State:
+
+3a. Can Finish Draw?  ✗
+3b. Finish Draw Expected Reward: 0.0 WETH
+3c. Finish Draw Expected Reward (USD): $0 $0
+
+
+
+Processing 'Start Draw' for 11155420 - Optimism Sepolia:
+Estimating RngWitnet#startDraw() gas costs ...
+
+Estimated gas limit (wei): 0.00000000000073002 ETH (730020 wei)
+Recent Gas Price (wei): 0.000000000001000252 ETH (1000252 wei)
+Recent Gas Price (gwei): 0.001000252 gwei
+
+Gas Cost (USD): $0.51 $0.5113867930220811
+
+******************
+
+
+Calculating profit ...
+Profit/Loss (USD):
+
+Gross Profit = Reward
+Net profit = (Gross Profit - Gas Fees [Max] - RNG Fee)
+$0.27 = ($1.88 - $0.51 - $1.1) $0.27231237069521885 = ($1.8826663892016815 - $0.5113867930220811 - $1.0989672254843814)
+
+┌──────────────────────────┬─────────┐
+│ (index)                  │ Values  │
+├──────────────────────────┼─────────┤
+│ MIN_PROFIT_THRESHOLD_USD │ '$0.1'  │
+│ Net Profit (USD)         │ '$0.27' │
+│ Profitable?              │ '✔'     │
+└──────────────────────────┴─────────┘
+
+Start Draw Transaction:
+Execute rngWitnet#startDraw
+
+Sending ...
+
+
+Transaction sent! ✔
+Transaction hash: 0x745244e9a14700841ee3f45989af4cbbf901bbf700a043198caca40c4177e77b
+
+|*******************************************************|
+|                                                       |
+|    Rewards accumulate post-draw on the PrizePool!     |
+|  Withdraw your rewards manually from that contract.   |
+|                                                       |
+|*******************************************************|

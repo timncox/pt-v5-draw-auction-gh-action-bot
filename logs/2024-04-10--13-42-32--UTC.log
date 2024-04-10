@@ -1,0 +1,82 @@
+Operating on: 11155420 - Optimism Sepolia
+
+
+Instantiating RNG contracts ...
+┌──────────────────────┬──────────────────────────────────────────────┐
+│ (index)              │ Values                                       │
+├──────────────────────┼──────────────────────────────────────────────┤
+│ prizePoolContract    │ '0x23Fc16532B025d2EBF73614b730793715aF56ec7' │
+│ drawManagerContract  │ '0xAc2079496445bcdE8C5bfD33021715aa37CC9A99' │
+│ rngWitnetContract    │ '0x3f592F85D4C7779814D43EB01f47375bDfe1a8B3' │
+│ rngBlockhashContract │ undefined                                    │
+└──────────────────────┴──────────────────────────────────────────────┘
+
+Gathering info on state of auctions ...
+Getting RNG token and native (gas) token market rates ...
+
+Running draw auction state context multicalls ...
+
+******************
+
+Tokens:
+
+1a. Chain Native/Gas Token ETH Market Rate (USD): $3436.5298
+1b. Reward Token 'WETH' Market Rate (USD): $3436.5298
+
+
+Rng Auction State:
+
+2a. Can Start Draw?  ✗
+2b. Start Draw Expected Reward: 0.0 WETH
+2c. Start Draw Expected Reward (USD): $0 $0
+2d. PrizePool (11155420 - Optimism Sepolia) can start draw in: 107.75 minutes
+
+
+Finish Draw Auction State:
+
+3a. Can Finish Draw?  ✔
+3b. Finish Draw Expected Reward: 0.000466731519895436 WETH
+3c. Finish Draw Expected Reward (USD): $1.6 $1.6039367767199586
+
+
+
+Processing 'Finish Draw' for 11155420 - Optimism Sepolia:
+Estimating DrawManager#finishDraw() gas costs ...
+
+Estimated gas limit (wei): 0.000000000000392561 ETH (392561 wei)
+Recent Gas Price (wei): 0.000000000001000252 ETH (1000252 wei)
+Recent Gas Price (gwei): 0.001000252 gwei
+
+Gas Cost (USD): $0.41 $0.4055545780172407
+
+
+Calculating profit ...
+
+Profit/Loss (USD):
+
+Gross Profit = Reward
+Net profit = (Gross Profit - Gas Fees [Max])
+$1.2 = ($1.6 - $0.41) $1.198382198702718 = ($1.6039367767199586 - $0.4055545780172407)
+
+┌──────────────────────────┬────────┐
+│ (index)                  │ Values │
+├──────────────────────────┼────────┤
+│ MIN_PROFIT_THRESHOLD_USD │ '$0.1' │
+│ Net Profit (USD)         │ '$1.2' │
+│ Profitable?              │ '✔'    │
+└──────────────────────────┴────────┘
+
+Execute DrawManager#finishDraw
+Sending ...
+
+
+
+Transaction sent! ✔
+Transaction hash: 0xf1734f3c743549f1a33e375bc431947994f5f9c5f3c42dbf3e6654703a182670
+
+|*******************************************************|
+|                                                       |
+|    Rewards accumulate post-draw on the PrizePool!     |
+|  Withdraw your rewards manually from that contract.   |
+|                                                       |
+|*******************************************************|
