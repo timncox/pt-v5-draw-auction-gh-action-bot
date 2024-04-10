@@ -1,0 +1,70 @@
+Operating on: 11155420 - Optimism Sepolia
+
+
+Instantiating RNG contracts ...
+┌──────────────────────┬──────────────────────────────────────────────┐
+│ (index)              │ Values                                       │
+├──────────────────────┼──────────────────────────────────────────────┤
+│ prizePoolContract    │ '0x23Fc16532B025d2EBF73614b730793715aF56ec7' │
+│ drawManagerContract  │ '0xAc2079496445bcdE8C5bfD33021715aa37CC9A99' │
+│ rngWitnetContract    │ '0x3f592F85D4C7779814D43EB01f47375bDfe1a8B3' │
+│ rngBlockhashContract │ undefined                                    │
+└──────────────────────┴──────────────────────────────────────────────┘
+
+Gathering info on state of auctions ...
+Getting RNG token and native (gas) token market rates ...
+
+Running draw auction state context multicalls ...
+
+******************
+
+Tokens:
+
+1a. Chain Native/Gas Token ETH Market Rate (USD): $3425.572
+1b. Reward Token 'WETH' Market Rate (USD): $3425.572
+
+
+Rng Auction State:
+
+2a. Can Start Draw?  ✔
+2b. Start Draw Expected Reward: 0.000546550920526038 WETH
+2c. Start Draw Expected Reward (USD): $1.87 $1.8722495299282211
+2d. PrizePool (11155420 - Optimism Sepolia) can start draw in: 113.6 minutes
+
+
+Finish Draw Auction State:
+
+3a. Can Finish Draw?  ✗
+3b. Finish Draw Expected Reward: 0.0 WETH
+3c. Finish Draw Expected Reward (USD): $0 $0
+
+
+
+Processing 'Start Draw' for 11155420 - Optimism Sepolia:
+Estimating RngWitnet#startDraw() gas costs ...
+
+Estimated gas limit (wei): 0.00000000000073002 ETH (730020 wei)
+Recent Gas Price (wei): 0.000000000001000252 ETH (1000252 wei)
+Recent Gas Price (gwei): 0.001000252 gwei
+
+Gas Cost (USD): $0.63 $0.6287446852197789
+
+******************
+
+
+Calculating profit ...
+Profit/Loss (USD):
+
+Gross Profit = Reward
+Net profit = (Gross Profit - Gas Fees [Max] - RNG Fee)
+$-0.11 = ($1.87 - $0.63 - $1.35) $-0.10890005116197377 = ($1.8722495299282211 - $0.6287446852197789 - $1.352404895870416)
+
+┌──────────────────────────┬──────────┐
+│ (index)                  │ Values   │
+├──────────────────────────┼──────────┤
+│ MIN_PROFIT_THRESHOLD_USD │ '$0.1'   │
+│ Net Profit (USD)         │ '$-0.11' │
+│ Profitable?              │ '✗'      │
+└──────────────────────────┴──────────┘
+
+Completing current auction currently not profitable. Try again soon ...
