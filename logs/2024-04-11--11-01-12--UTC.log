@@ -1,0 +1,42 @@
+Operating on: 11155420 - Optimism Sepolia
+
+
+Instantiating RNG contracts ...
+┌──────────────────────┬──────────────────────────────────────────────┐
+│ (index)              │ Values                                       │
+├──────────────────────┼──────────────────────────────────────────────┤
+│ prizePoolContract    │ '0x46151C11e176425864ab85363e3aF69b21EA2cf4' │
+│ drawManagerContract  │ '0xB6936CD59824a36303747a08af4E7D51b7528C9d' │
+│ rngWitnetContract    │ '0x202bD969fF51647F1d09d2C426010b4366265a77' │
+│ rngBlockhashContract │ undefined                                    │
+└──────────────────────┴──────────────────────────────────────────────┘
+
+Gathering info on state of auctions ...
+Getting RNG token and native (gas) token market rates ...
+
+Running draw auction state context multicalls ...
+
+******************
+
+Tokens:
+
+1a. Chain Native/Gas Token ETH Market Rate (USD): $3556.7546
+1b. Reward Token 'WETH' Market Rate (USD): $3556.7546
+
+
+Rng Auction State:
+
+2a. Can Start Draw?  ✗
+2b. Start Draw Expected Reward: 0.0 WETH
+2c. Start Draw Expected Reward (USD): $0 $0
+2d. PrizePool (11155420 - Optimism Sepolia) can start draw in: 1.2666666666666666 minutes
+
+
+Finish Draw Auction State:
+
+3a. Can Finish Draw?  ✗
+3b. Finish Draw Expected Reward: 0.0 WETH
+3c. Finish Draw Expected Reward (USD): $0 $0
+
+
+
