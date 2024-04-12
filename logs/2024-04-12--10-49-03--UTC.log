@@ -1,0 +1,73 @@
+Operating on: 11155420 - Optimism Sepolia
+
+Config - REWARD_RECIPIENT not provided, setting swap recipient to relayer address: 0x06003274c3a7926c04cA8d6903cc691fE8f3CEC2
+Config - MIN_PROFIT_THRESHOLD_USD: -0.1
+
+
+Instantiating RNG contracts ...
+┌──────────────────────┬──────────────────────────────────────────────┐
+│ (index)              │ Values                                       │
+├──────────────────────┼──────────────────────────────────────────────┤
+│ prizePoolContract    │ '0x1509E03404571A17B70EAe702EB5c05D3C82eae9' │
+│ drawManagerContract  │ '0x80c24bF18Db7bbB91D6dE1B76B081c5B6fb62bb1' │
+│ rngWitnetContract    │ '0x7F88fAcD829dCD60297246382a3e848088dD5C1e' │
+│ rngBlockhashContract │ undefined                                    │
+└──────────────────────┴──────────────────────────────────────────────┘
+
+Gathering info on state of auctions ...
+Getting RNG token and native (gas) token market rates ...
+
+Running draw auction state context multicalls ...
+
+******************
+
+Tokens:
+
+1a. Chain Native/Gas Token ETH Market Rate (USD): $3518.0688
+1b. Reward Token 'WETH' Market Rate (USD): $3518.0688
+
+
+Rng Auction State:
+
+2a. Can Start Draw?  ✔
+2b. Start Draw Expected Reward: 0.0 WETH
+2c. Start Draw Expected Reward (USD): $0 $0
+2d. PrizePool (11155420 - Optimism Sepolia) can start draw in: 215.33333333333334 minutes
+
+
+Finish Draw Auction State:
+
+3a. Can Finish Draw?  ✗
+3b. Finish Draw Expected Reward: 0.0 WETH
+3c. Finish Draw Expected Reward (USD): $0 $0
+
+
+
+Processing 'Start Draw' for 11155420 - Optimism Sepolia:
+Estimating RngWitnet#startDraw() gas costs ...
+
+Estimated gas limit (wei): 0.00000000000072785 ETH (727850 wei)
+Recent Gas Price (wei): 0.000000000001000252 ETH (1000252 wei)
+Recent Gas Price (gwei): 0.001000252 gwei
+
+Gas Cost (USD): $2.63 $2.630748330276404
+
+******************
+
+
+Calculating profit ...
+Profit/Loss (USD):
+
+Gross Profit = Reward
+Net profit = (Gross Profit - Gas Fees [Max] - RNG Fee)
+$-8.34 = ($0 - $2.63 - $5.71) $-8.336769673850087 = ($0 - $2.630748330276404 - $5.706021343573683)
+
+┌──────────────────────────┬──────────┐
+│ (index)                  │ Values   │
+├──────────────────────────┼──────────┤
+│ MIN_PROFIT_THRESHOLD_USD │ '$-0.1'  │
+│ Net Profit (USD)         │ '$-8.34' │
+│ Profitable?              │ '✗'      │
+└──────────────────────────┴──────────┘
+
+Completing current auction currently not profitable. Try again soon ...
