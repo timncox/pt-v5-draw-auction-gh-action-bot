@@ -1,0 +1,49 @@
+Operating on: 10 - Optimism
+
+Config - REWARD_RECIPIENT not provided, setting swap recipient to relayer address: 0xf9A3856b5368f60f2837c797A993F46C6ea7117d
+Config - MIN_PROFIT_THRESHOLD_USD: 0.1
+
+
+Instantiating RNG contracts ...
+┌──────────────────────┬──────────────────────────────────────────────┐
+│ (index)              │ Values                                       │
+├──────────────────────┼──────────────────────────────────────────────┤
+│ prizePoolContract    │ '0xF35fE10ffd0a9672d0095c435fd8767A7fe29B55' │
+│ drawManagerContract  │ '0x7eED7444dE862c4F79c5820ff867FA3A82641857' │
+│ rngWitnetContract    │ '0x3d2Ef6C091f7CB69f06Ec3117F36A28BC596aa7B' │
+│ rngBlockhashContract │ undefined                                    │
+└──────────────────────┴──────────────────────────────────────────────┘
+
+Gathering info on state of auctions ...
+Getting RNG token and native (gas) token market rates ...
+
+Running draw auction state context multicalls ...
+
+******************
+
+Tokens:
+
+1a. Chain Native/Gas Token ETH Market Rate (USD): $3158.3132
+1b. Reward Token 'WETH' Market Rate (USD): $3158.3132
+
+
+Rng Auction State:
+
+2a. Can Start Draw?  ✔
+2b. Start Draw Expected Reward: 0.000002750659367694 WETH
+2c. Start Draw Expected Reward (USD): $0.01 $0.008687443789691614
+2d. PrizePool (10 - Optimism) can start draw in: 1418.7 minutes
+
+
+Finish Draw Auction State:
+
+3a. Can Finish Draw?  ✗
+3b. Finish Draw Expected Reward: 0.0 WETH
+3c. Finish Draw Expected Reward (USD): $0 $0
+
+
+
+Processing 'Start Draw' for 10 - Optimism:
+Estimating RngWitnet#startDraw() gas costs ...
+
+Error: cannot estimate gas; transaction may fail or may require manual gas limit [ See: https://links.ethers.org/v5-errors-UNPREDICTABLE_GAS_LIMIT ] (reason="execution reverted: WitnetOracleTrustableOvm2: too much reward", method="estimateGas", transaction={"to":"0x3d2Ef6C091f7CB69f06Ec3117F36A28BC596aa7B","value":{"type":"BigNumber","hex":"0x0180946ff315"},"data":"0xe401f1d500000000000000000000000000000000000000000000000000000180946ff3150000000000000000000000007eed7444de862c4f79c5820ff867fa3a82641857000000000000000000000000f9a3856b5368f60f2837c797a993f46c6ea7117d","accessList":null}, error={"reason":"processing response error","code":"SERVER_ERROR","body":"{\"jsonrpc\":\"2.0\",\"id\":53,\"error\":{\"code\":3,\"data\":\"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002a5769746e65744f7261636c65547275737461626c654f766d323a20746f6f206d7563682072657761726400000000000000000000000000000000000000000000\",\"message\":\"execution reverted: WitnetOracleTrustableOvm2: too much reward\"}}","error":{"code":3,"data":"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002a5769746e65744f7261636c65547275737461626c654f766d323a20746f6f206d7563682072657761726400000000000000000000000000000000000000000000"},"requestBody":"{\"method\":\"eth_estimateGas\",\"params\":[{\"value\":\"0x180946ff315\",\"to\":\"0x3d2ef6c091f7cb69f06ec3117f36a28bc596aa7b\",\"data\":\"0xe401f1d500000000000000000000000000000000000000000000000000000180946ff3150000000000000000000000007eed7444de862c4f79c5820ff867fa3a82641857000000000000000000000000f9a3856b5368f60f2837c797a993f46c6ea7117d\"}],\"id\":53,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","url":"https://optimism-mainnet.infura.io/v3/f0358a7a223e43e982d51cd8c647bd07"}, code=UNPREDICTABLE_GAS_LIMIT, version=providers/5.7.2)
