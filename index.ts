@@ -35,16 +35,11 @@ const main = async () => {
     contractJsonUrl: envVars.CONTRACT_JSON_URL,
   };
 
-  try {
-    const rngContracts: ContractsBlob = await downloadContractsBlob(
-      drawAuctionConfig.contractJsonUrl,
-      nodeFetch
-    );
-
-    await runDrawAuction(rngContracts, drawAuctionConfig);
-  } catch (e) {
-    console.error(e);
-  }
+  const rngContracts: ContractsBlob = await downloadContractsBlob(
+    drawAuctionConfig.contractJsonUrl,
+    nodeFetch
+  );
+  await runDrawAuction(rngContracts, drawAuctionConfig);
 };
 
 main();
