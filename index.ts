@@ -32,11 +32,12 @@ const main = async () => {
     signer: relayerAccount.signer,
     wallet: relayerAccount.wallet,
     relayerAddress: relayerAccount.relayerAddress,
+    contractJsonUrl: envVars.CONTRACT_JSON_URL,
   };
 
   try {
     const rngContracts: ContractsBlob = await downloadContractsBlob(
-      drawAuctionConfig.chainId,
+      drawAuctionConfig.contractJsonUrl,
       nodeFetch
     );
 
