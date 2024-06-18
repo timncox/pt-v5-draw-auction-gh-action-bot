@@ -33,6 +33,7 @@ const main = async () => {
     wallet: relayerAccount.wallet,
     relayerAddress: relayerAccount.relayerAddress,
     contractJsonUrl: envVars.CONTRACT_JSON_URL,
+    errorStateMaxGasCostThresholdUsd: envVars.ERROR_STATE_MAX_GAS_COST_THRESHOLD_USD,
   };
 
   const rngContracts: ContractsBlob = await downloadContractsBlob(
