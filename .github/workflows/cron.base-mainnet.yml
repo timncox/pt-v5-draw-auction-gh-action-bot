@@ -1,15 +1,16 @@
-name: CronJob
+name: CronJob - Draw Auction Bot - Base
 on:
   schedule:
-    - cron: "*/5 * * * *" # ie. 4:00pm, 4:05pm, 4:10pm ... etc.
+    - cron: "*/5 * * * *" # ie. 4:05pm, 4:10pm, 4:15pm ... etc.
   push:
 env:
-  CHAIN_ID: 10
-  MIN_PROFIT_THRESHOLD_USD: 0.1
-  REWARD_RECIPIENT: '0xa8078cAbCE440b0fEADD7264Adf179D301fCef18'
-  JSON_RPC_URI: ${{ secrets.JSON_RPC_URI }}
+  CHAIN_ID: 8453
+  MIN_PROFIT_THRESHOLD_USD: 0.01
+  REWARD_RECIPIENT: ''
+  JSON_RPC_URL: ${{ secrets.BASE_MAINNET_JSON_RPC_URL }}
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
+  CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/bc84c3f5e1d9703372ae7f9baf584bab42f47b27/deployments/base/contracts.json'
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
 jobs:
@@ -23,12 +24,12 @@ jobs:
         os: [ubuntu-latest]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       
       - name: Use Node ${{ matrix.node }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
 
